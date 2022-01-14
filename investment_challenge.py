@@ -3,9 +3,11 @@
 #  3. Print out earnings after a 10 year period
 
 # Solution
-money = float(input("How much to invest: "))
-interest_rate = float(input("Your interest rate: ")) * .01
+money = float(input("Enter investment amount: "))
+interest_rate = float(input("Enter interest rate: ")) * 0.01
 
-for i in range(10):
+for i in range(11):
     money = money + money * interest_rate
-print("Investment after 10 years = ${:.2f}".format(money))
+    if (i == 10):
+        print("Your earning is ${:.2f} after {} years of investment ".format(money, i))
+
